@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>Blogging Website</title>
+
+        <link rel="stylesheet" href="style.css"/>
+
+    </head>
+    <body>
+        <div class="container">
+            <div class="staticHeader">
+                <div class="headingStyle">Blogging Website</div>
+                <div>
+                    <input type="button" id="newPostBtn" value="Create New Post"/>
+                </div>
+            </div>
+            <div class="dynamicPart">
+        </div>
+
+        <div class="createModal">
+
+            <div class="createModalContent">
+                <div class="createModalHeading">
+                    <div class="modalHeading">Create A Post</div>
+                    <div>
+                        <i class="material-icons" id="closeModal">close</i>
+                    </div>
+                </div>
+                <div class="postheadText">
+                    <input
+                        type="text"
+                        name="createPostHeading"
+                        id="createPostHeading"
+                        form="postForm"
+                        placeholder="Enter Your Heading..."
+                        required="required"/>
+                </div>
+                <div class="postText">
+                    <textarea
+                        name="createPostContent"
+                        id="createPostContent"
+                        form="postForm"
+                        placeholder="Enter Your Blog Post..."
+                        required="required"></textarea>
+                </div>
+                <div class="postButtons">
+                    <div>
+                        <input
+                            type="submit"
+                            class="modalButtons"
+                            value="Publish Post"
+                            form="postForm"
+                            id="pblshPost"/>
+                    </div>
+                    <div>
+                        <input type="button" class="modalButtons" value="Cancel Post" id="cnclPst"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <form id="postForm" onsubmit="post_content(event)"></form>
+        <div class="editModal">
+            <div class="editModalContent">
+                <div class="editModalHeading">
+                    <div class="modalHeading">Edit A Post</div>
+                    <div>
+                        <i class="material-icons" id="closeModal">close</i>
+                    </div>
+                </div>
+
+                <div class="postheadText">
+                    <input type="text" name="postHeading" id="postHeading"/>
+                </div>
+                <div class="postText">
+                    <textarea name="postContent" id="postContent"></textarea>
+                </div>
+
+                <div class="postButtons">
+                    <div>
+                        <input type="submit" class="modalButtons" value="Save Post" id="savePost"/>
+                    </div>
+                    <div>
+                        <input type="button" class="modalButtons" value="Delete Post" id="delPost"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="app.js" defer="defer"></script>
+
+    </body>
+</html>
